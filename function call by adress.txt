@@ -1,0 +1,23 @@
+
+In the call by address method, both actual and formal parameters indirectly share the same variable. 
+
+In this type of call mechanism, pointer variables are used as formal parameters. 
+
+The formal pointer variable holds the address of the actual parameter, hence the changes done by the formal parameter is also reflected in the actual parameter. 
+As demonstrated in the diagram, both parameters point to different locations in memory, but since the formal parameter stores the address of the actual parameter, they share the same value.
+
+#include <iostream>
+using namespace std;
+
+//a stores the address of x
+void increment(int *a){
+    (*a)++;
+    cout << "Value in Function increment: "<< *a <<endl;
+}
+int main()
+{
+    int x = 5;
+    increment(&x); //Passing address of x
+    cout << "Value in Function main: "<< x <<endl;
+    return 0;
+}

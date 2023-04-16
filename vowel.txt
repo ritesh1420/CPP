@@ -1,0 +1,42 @@
+
+#include <iostream>       // std::cout
+#include <string>         // std::string
+using namespace std;
+int main ()
+{
+  string str ("abcdefghijklmnopqrstuvwxyz");
+//  string str2 ("object");
+
+  // different member versions of find 
+ // size_t position_count ;
+  int temp_length , i , count=0, consonent=0;
+  temp_length = str.length();
+  cout << temp_length << endl ;
+  
+ for (i=0; i<temp_length; i++)
+ {
+   switch (str.at(i)) 
+ {
+  case 'a':
+    count++;
+    break; 
+  case 'e':
+    count++;
+    break;
+  case 'i':
+    count++;
+    break;
+     case 'o':
+    count++;
+    break;
+     case 'u':
+    count++;
+    break;
+    default :
+    consonent++;
+ }
+ }
+ cout << endl << count << endl<< consonent ;
+  return 0;
+}
+

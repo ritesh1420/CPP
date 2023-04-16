@@ -1,0 +1,29 @@
+
+When a function is called in the call by value, the value of the actual parameters is copied into formal parameters.
+
+
+Both the actual and formal parameters have their own copies of values, therefore any change in one of the types of parameters will not be reflected by the other.
+
+
+This is because both actual and formal parameters point to different locations in memory (i.e. they both have different memory addresses).
+
+Call by value method is useful when we do not want the values of the actual parameters to be changed by the function that has been invoked.
+#include <iostream>
+using namespace std;
+
+//Value of x gets copied into a
+void increment(int a){
+    a++;
+    cout << "Value in Function increment: "<< a <<endl;
+}
+int main()
+{
+    int x = 5;
+    increment(x);
+    cout << "Value in Function main: "<< x <<endl;
+    return 0;
+}
+//
+Note the output of the program. The value of ‘a’ has been increased to 6, but the value of ‘x’ in the main method remains the same.
+
+This proves that the value is being copied to a different memory location in the call by value

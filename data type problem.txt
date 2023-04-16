@@ -1,0 +1,15 @@
+#include<iostream>
+using namespace std;
+
+int main() {
+   int i;long int l;char ch;float f; double d;
+    cin>>i>>l>>ch>>f>>d;
+    //scanf("%d %ld %c %f %lf",&i,&l,&ch,&f,&d);
+    //printf("%d %ld %c %f %lf",i,l,ch,f,d);
+    cout<<i<<endl<<l<<endl<<ch<<endl;
+    cout.precision(3);
+    cout<<fixed<<f<<endl;
+    cout.precision(9);
+    cout<<fixed<<d<<endl;
+    return 0;
+}

@@ -1,0 +1,14 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+char a[50];
+int i;
+//name of array is point to first memory location
+for(i=0;i<=25;i++)
+
+	*(a+i)=65+i;
+	*(a+i)='\0';
+	cout<<a;	
+	 
+}

@@ -1,0 +1,56 @@
+#include<iostream>
+using namespace std;
+class base1
+{
+	protected:
+		int rollno,section;
+		public:
+			void getdata()
+			{
+				rollno=9;
+			}
+			void display()
+			{
+				cout<<"base1 class roll no:"<<rollno<<endl;
+			}
+};
+class base2
+{
+	protected:
+	int age;
+	public:
+		void getdata()
+		
+		{
+			age=8;
+		}
+		void display()
+		{
+			cout<<"base2 class age is:"<<age<<endl;
+		}
+};
+class derive:private base1,public base2//both :public base1,public base2 declair as public
+//other wise if we make ony one of then or both private or protected then 
+//[Error] 'class base base::base' is inaccessible will be come
+{
+	int gf;
+	public:
+		void getdata()
+		{
+			gf=1;
+		}
+		void display()
+		{
+			cout<<" derive class number of gf:"<<gf<<endl;
+		}
+};
+int main()
+{
+	derive d;
+	d.getdata();//derive class function will be call
+	d.display();
+	d.base1::getdata();//base1 class function will be call
+	d.base1::display();
+	d.base2::getdata();//base2 class function will get call;
+	d.base2::display();
+}

@@ -1,0 +1,22 @@
+#include<iostream>
+using namespace std;
+class docoment
+{
+	int age;
+	 static float marks;
+	 public:
+	 static	void setdata(int a)//ststic member function
+	 	{
+	 		marks=a;
+	 		cout<<marks;
+		 }
+};
+float docoment::marks=88;
+int main()
+{
+	docoment b;
+	b.setdata(99);//this can call funtion only when member function is public
+          // means class is public
+	docoment::setdata(78);//static member funtion it dont required any object to caall in main
+	return 0;
+}

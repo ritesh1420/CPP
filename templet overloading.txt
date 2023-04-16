@@ -1,0 +1,18 @@
+#include<iostream>
+using namespace std;
+template<class t,class t1,class t2>
+double add(t a,t1 b,t2 c=0)
+{
+	return(a+b+c);
+}
+template<class t,class t1>
+double add(t x,t1 b)
+{
+	return(x+b);
+}
+
+int main()
+{
+cout<<add(3,2);	
+cout<<add(1,2,3);
+}

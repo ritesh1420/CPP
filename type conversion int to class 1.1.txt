@@ -1,0 +1,29 @@
+#include<iostream>
+using namespace std;
+class Area
+{
+	int a;
+	float area;
+	public:
+		void operator =(int);
+		void showdata();
+};
+void Area::showdata()
+{
+	cout<<"area of circle is:"<<area;
+}
+void Area::operator =(int r)
+{
+	area=3.14*r*r;
+}
+int main()
+{
+    Area b1;
+	int radii;
+	cout<<"enter the radious of circle:";
+	cin>>radii;
+	b1=radii;
+	b1.showdata();
+	b1.operator =(radii);
+	b1.showdata();
+	return 0;

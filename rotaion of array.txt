@@ -1,0 +1,65 @@
+// C++ program to rotate an array by
+// d elements
+#include <bits/stdc++.h>
+using namespace std;
+ 
+/*Function to left Rotate arr[] of 
+  size n by 1*/
+void leftRotatebyOne(int arr2[], int n)
+{
+    int temp = arr2[0], i;
+    for (i = 0; i < n - 1; i++)
+        arr2[i] = arr2[i + 1];
+ 
+    arr2[n-1] = temp;
+}
+ 
+/*Function to left rotate arr[] of size n by d*/
+void leftRotate(int arr1[], int d, int n)
+{
+    for (int i = 0; i < d; i++)
+        leftRotatebyOne(arr1, n);
+}
+ 
+/* utility function to print an array */
+void printArray(int arr3[], int n)
+{
+    for (int i = 0; i < n; i++)
+        cout << arr3[i] << " ";
+}
+
+/* void method1 (int arr4[] , int d , int n1)
+{
+    int temp[d-1] , i;
+    
+    for (int i = 0; i < d; i++)
+        temp[i] = arr4[i];
+        
+    for (int i = 0; i < (n1-d) ; i++)
+        arr4[i] = arr4[i+d] ;
+    
+    for (int i = d-1, j = 0 ; i = 0; i-- , j++)
+        arr4[n1-i] = temp[j] ;
+        
+    return() ;
+} */
+
+ 
+/* Driver program to test above functions */
+int main()
+{
+    int arr[] = { 1, 2, 3, 4, 5, 6, 7 };
+    int rotate_by ;
+  
+    int n = sizeof(arr) / sizeof(arr[0]) ; // total bytes occupied divided by bytes required for storing one array element 
+   
+    cout << "Enter the number by which to rotate an Array: " ;
+    cin >> rotate_by ;
+    
+  //  method1(arr , rotate_by , n ) ;
+    // Function calling
+    leftRotate(arr, rotate_by, n);
+    printArray(arr, n);
+ 
+    return 0;
+}

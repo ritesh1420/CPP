@@ -1,0 +1,47 @@
+#include<iostream>
+using namespace std;
+class employee
+{
+	string name;
+	int dep_no;
+	public:
+		void getdata(int a,string b)
+		{
+		cout<<"enter your department number:"<<endl;
+			cin>>a;
+		
+			cout<<"enter your name:"<<endl;
+			cin>>b;
+			dep_no=a;
+				name=b;
+			
+		}
+		void showdata()
+		{
+			cout<<"your name is:"<<name<<endl;
+		}
+};
+class project:public employee
+{
+	int sal;
+	string dep;
+	public:
+		void get_prj(int x,string y)
+		{
+			sal=x;
+			y="MEC";
+			dep=y;
+		}
+		void display()
+		{
+			cout<<"your salary is:"<<sal<<endl<<"and your deparment is "<<dep;
+		}
+};
+int main()
+{
+	project p1;
+	p1.getdata(0,"0");
+	p1.showdata();
+	p1.get_prj(230000,"0");
+	p1.display();
+}

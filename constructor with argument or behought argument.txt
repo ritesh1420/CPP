@@ -1,0 +1,33 @@
+//constructor construct object
+#include<iostream>
+using namespace std;
+class docoment
+{
+	int age;
+	 float marks;
+	 public:
+	 	
+	 docoment(int a,int b)//parametrise constructor
+	 	{
+	    age=a;marks=b;
+	 	cout<<age<<marks<<endl;
+	}
+		docoment(int c)//initionlising c agrument value to a argument value
+		 {
+		 	age=c;
+		 	cout<<age<<endl;
+			 
+		 }
+		 docoment()//default constructor
+		 {
+		//not nessesary ki ham eske andar coding kare
+		 }
+};
+int main()
+{
+	docoment b(6,9),b2=docoment(3,5);//b1=docoment(3,4) is same of b1(3,4);
+	docoment b1(5);//for this second constructor will br call
+	docoment b3;//for this thitd constructor will be call
+docoment b5=44,b6;//we cam pass one agrument by this way
+	return 0;
+}

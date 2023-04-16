@@ -1,0 +1,19 @@
+//parametrise constructor means constuctor with argument
+#include<iostream>
+using namespace std;
+class docoment
+{
+	int age;
+	  float marks;
+	 public:
+	 docoment(int a,int b)//constuctor with argument
+	 	{
+	    
+	 		cout<<a<<b;
+		 }
+};
+int main()
+{
+	docoment b(6,9);//b oblect with argument 
+	return 0;
+}

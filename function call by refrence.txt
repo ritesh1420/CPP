@@ -1,0 +1,23 @@
+In the call by reference, both formal and actual parameters share the same value.
+Both the actual and formal parameter points to the same address in the memory.
+
+
+That means any change on one type of parameter will also be reflected by other.
+Calls by reference are preferred in cases where we do not want to make copies of objects or variables, but rather we want all operations to be performed on the same copy.
+
+#include <iostream>
+using namespace std;
+//Value of x is shared with a
+void increment(int &a)  {
+cout << "memory location of variable a: " << &a << endl ;
+ a++;
+ cout << "Value in Function increment: "<< a << endl;
+}
+int main() {
+ int x = 5;
+ cout << "memory location of variable x: " << &x << endl;
+ increment(x);
+ cout << "Value in Function main: "<< x <<endl;
+ increment(x);
+ cout << "Value in Function main: "<< x <<endl;
+ return 0;  }

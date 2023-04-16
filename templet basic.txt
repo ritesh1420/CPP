@@ -1,0 +1,19 @@
+#include<iostream>
+using namespace std;
+
+template<class t,class s>double add( t a,s b)
+
+{
+
+return(a+b);
+}
+int main()
+{
+
+cout<<add(3,5)<<endl;
+cout<<add(9.5,6.8)<<endl;
+cout<<add(7.9,6)<<endl;
+cout<<add(9,8.8);
+
+	
+}

@@ -1,0 +1,32 @@
+#include<iostream>
+using namespace std;
+ class ritesh
+{
+    public:
+		int gf;
+	int age;
+
+char ch[20];
+};
+int main()
+{
+ritesh obj;
+cout<<"enter the name:\n";
+cin>>obj.ch;
+cout<<"enter the age and no of your gf:\n";
+cin>>obj.age>>obj.gf;
+ritesh *ptr;
+ptr=&obj;
+cout<<obj.ch;
+cout<<ptr->ch<<endl;
+cout<<"adress of gf is:";
+cout<<&obj.gf<<endl;
+cout<<"adress of age is:"<<&obj.age<<endl;
+cout<<"adress of obj is:";
+cout<<&obj<<endl;
+cout<<ptr<<endl;
+cout<<"adress of pointer is:"<<&ptr<<endl;
+
+
+
+}

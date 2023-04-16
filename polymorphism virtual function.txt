@@ -1,0 +1,43 @@
+#include<iostream>
+using namespace std;
+class shape
+{
+	public:
+		virtual void draw()//if we do not make virtual then shap draw function will call only
+		{
+		cout<<"in shape class"<<endl;
+
+		}
+};
+class circle:public shape
+{
+	public:
+		void draw()
+		{
+			cout<<"in circle class"<<endl;
+			
+		}
+};
+class rec:public shape
+{
+	public:
+		void draw()
+		{
+			cout<<"in rectangle class"<<endl;
+		}
+};
+int main()
+{
+	circle c1,c2,c3;
+	rec r1,r2,r3;
+	int i;
+	shape *p[]={&c1,&c2,&r1,&r2,&r3,&c3};
+	for(i=0;i<=5;i++)
+	{
+	
+		p[i]->draw();
+		
+	}
+		return 0;
+	
+}

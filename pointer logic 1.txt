@@ -1,0 +1,11 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+int a=44,b=55;
+int *p=&a;
+int *q=&b;
+p=q;
+cout<<q<<endl;
+cout<<p;
+}

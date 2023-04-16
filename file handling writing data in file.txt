@@ -1,0 +1,9 @@
+#include<iostream>
+#include<fstream>
+using namespace std;
+int main()
+{
+ofstream fin;//fin is any object of class ofstream for writting in file
+fin.open("my file");//my file =name of file which i am creating
+fin<<"hello girls";//writting in the my file
+}

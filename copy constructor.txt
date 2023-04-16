@@ -1,0 +1,43 @@
+//constructor construct object
+//by default two constructor is created by compiler
+//1.  default constructor       2.   copy constructor
+
+#include<iostream>
+using namespace std;
+class docoment
+{
+	int age;
+	 float marks;
+	 public:
+	 docoment(int a,int b)//constuctor with argument
+	 	{
+	    age=a;marks=b;
+	 	cout<<age<<marks<<endl;
+	}
+		docoment(int c)//initionlising c agrument value to a argument value
+		 {
+		 	age=c;
+		 	cout<<age<<endl;
+			 
+		 }
+		 docoment( docoment &c)//copy constructor  argument type is same as class
+		   //by default it will created when we do not creat copy constructor 
+		 {
+		 age=c.age;
+		 marks=c.marks;
+		 }
+};
+int main()
+{
+	docoment b(6,9);//b1=docoment(3,4) is same of b1(3,4);
+	docoment b1(5);//for this second constructor will br call
+	//docoment b3;//for this thitd constructor will be call
+       
+    docoment b6(b);//which constructor will call now? ans- no one 
+	//it will not give error also
+	//copy constructor will call by default if we do not creat a copy constructor
+	
+	//lets see how copy constructor will look looklike
+    
+	return 0;
+}

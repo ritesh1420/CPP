@@ -1,0 +1,36 @@
+<html>
+
+<title>First Page</title>
+
+<!...About Heading/>
+
+<head><h2><marquee direction="right" scrolldelay="200"><u>My First Webpage</u></marquee></h2></head>
+
+<body>
+<p>This is <i>K20ND</i> and <b>Internet Programming lab </b>is going on and the price is 10€</p>
+<UL type="square">Benifits of the Course:
+<li>Extra knowledge about the course
+<li>Low Pricing
+<li>Efficient and Remote
+</UL>
+<Form method=POST >
+<b>First Name</b><input type="text" placeholder="Shabaz" id="t1" /><br><br>
+<b>Last Name</b><input type="text" placeholder="Mohammad" id="t2" /><br><br>
+<b>Gender</b><input type="radio" name="g" id="g1">Male</input><input type="radio" name="g" id="g2">FeMale</input><br><br>
+<b>Address</b><textarea rows="1" cols="20" id="t3"></textarea><br><br>
+<input type="button" value="Submit" onclick="return valid()">
+</Form>
+
+<script>
+function valid(){
+
+if(document.getElementById("g1").checked==false && document.getElementById("g2").checked==false )
+{
+alert("gender must not be empty");
+return false;
+}
+alert("sucessfully submitted");
+}
+</script>
+</body>
+</html>

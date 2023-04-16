@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std ;
+/*
+return_type (class_name::*ptr_name) (argument_type) = &class_name::function_name;
+*/ 
+class Data
+{
+ public:
+ void f(int a)
+ { cout << endl << "test function" << endl ;
+   cout <<  a <<  endl ;
+ }
+};
+
+void (Data::*fp2) (int) ; // Only Declaration
+int main()
+{
+    void (Data::*fp1) (int) = &Data::f; // Declaration and assignment
+    Data d1 , d2 ;
+ fp2 = &Data::f ; // Assignment inside main()
+  
+ (d1.*fp1)(10);
+ 
+ Data *ptr = &d1 ;
+ 
+ (ptr->*fp1)(20) ;
+ (ptr->*fp2)(30) ;
+ 
+ ptr = &d2 ;
+ (ptr->*fp1)(40) ;
+ (ptr->*fp2)(50) ;
+ return 0 ;
+}
+
+

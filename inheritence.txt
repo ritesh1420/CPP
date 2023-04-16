@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+class student
+{
+    protected: 
+	int rollno;
+public:
+	student() {rollno=1;}
+};	
+class test: public student  //here  public is mode of inheritance
+{    
+	float  marks;    
+  public:    
+	test() { marks=40;}   
+	void display(void);
+};
+void test::display()
+{
+	cout<<"Rollno ="<<rollno<<endl; //not accessible here as private in base
+	cout<<"Marks ="<<marks<<endl;
+}
+int main()
+{
+ //   student s1;
+    test t1;
+	t1.display();
+//	cout << s1.rollno;
+	return 0;
+}
+

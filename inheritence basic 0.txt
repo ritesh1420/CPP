@@ -1,0 +1,39 @@
+#include<iostream>
+using namespace std;
+class index
+{ 
+protected:
+	int count;
+	public:
+		index()
+		{
+			count=9;
+		}
+		void operator++()
+		{
+			++count;
+		}
+		void display()
+		{
+			cout<<count<<endl;
+		}	
+};
+class newindex:public index
+{
+	public:
+		void operator--()
+		{
+			count--;
+		}
+
+};
+int main()
+{
+	newindex b;//derive class has acess of base class
+	index c;
+	++b;
+	++b;
+	b.display();
+	--b;
+	b.display();	
+}

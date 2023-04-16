@@ -1,0 +1,31 @@
+//constructor
+#include<iostream>
+using namespace std;
+class base
+{   
+    protected:
+    	int i;
+	public:
+		base()//base constructor will call first
+		{
+		i=4;
+		cout<<"value of i="<<i<<endl;
+		}
+
+};
+class derive:public base
+{
+	int j;
+	public:
+		derive()
+		{
+		j=i*4;
+		cout<<"value of j="<<j;
+		}
+	
+};
+int main()
+{
+	derive b;
+
+}

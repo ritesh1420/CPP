@@ -1,0 +1,36 @@
+//reading from file
+#include<iostream>
+#include<fstream>
+using namespace std;
+int main()
+{
+ifstream fin;//for reading data from file
+char ch;
+fin.open("my file");
+fin>>ch;//cin associated with keybord thatsway it take data form keybord
+//but fin associated with my file so it will take data from "my file"
+while(!fin.eof())//eof(end of file) is function
+{
+	cout<<ch;
+	fin>>ch;//its dont show space between words;
+}
+fin.close();//for cloasing the file
+}
+//
+#include<iostream>
+#include<fstream>
+using namespace std;
+int main()
+{
+ifstream fin;//for reading data from file
+char ch;
+fin.open("my file");
+ch=fin.get();
+while(!fin.eof())//eof(end of file) is function
+{
+	cout<<ch;
+	ch=fin.get();//its show space between words;
+}
+fin.close();//for cloasing the file
+}
+

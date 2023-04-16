@@ -1,0 +1,57 @@
+#include <iostream>
+using namespace std;
+int main() 
+{
+   int x;
+   for(x=60; x<=126; x++)
+   {
+        printf("%c", x); /* Implicit casting from int to char %c */
+     //   cout << "    "<< x << ": " << (char)x ; /* Implicit TYPE casting from int to char */
+   }
+}
+
+
+
+#include <iostream>
+using namespace std;
+int main()
+{
+    int a= -2;
+    unsigned short int e = a; // unsigned short int occupies 2 bytes i.e. 16 bits. 2 to the power of 16 = 65536
+    cout << "\nConversion of negative integer value: " << a << " to unsigned Short int: " << e << endl;
+    
+    /* If a negative integer value is converted to an unsigned type, 
+    the resulting value corresponds to its 2's complement bitwise representation 
+    (i.e., -1 becomes the largest value representable by the type, -2 the second largest, and so on...). */ 
+    
+    unsigned int b ; // unsigned int occupies 4 bytes i.e. 32 bits. 2 to the power of 32 = 4294967296
+    b = a;
+    cout << "\nConversion of negative integer value: " << a << " to unsigned int: " << b << endl;
+    
+    
+    float c = 1.2; 
+    int f = 15;
+    a = c; 
+    cout << "\nConversion of float (Decimal) value: "<< c <<" to integer variable: " << a << endl;
+    c = f;
+    cout << "\nConversion of integer value f: "<< f <<" to floating variable c: " << c << ".0" <<  endl;
+    
+    bool z = false , x = true;
+    a = z;
+    b = x;
+    cout << "\n Boolean FALSE to integer varible is: " << a << endl << "\n Boolean TRUE to integer varible is: " << b << endl ;
+    /* 
+    cout << "\n Size of Boolean : " << sizeof(bool) << endl;
+    cout << " Size of char : " << sizeof(char) << endl;
+    cout << " Size of wchar_t Wide character : " << sizeof(wchar_t) << endl;
+    cout << " Size of int : " << sizeof(int) << endl;
+    cout << " Size of short int : " << sizeof(short int) << endl;
+    cout << " Size of long int : " << sizeof(long int) << endl;
+    cout << " Size of long long : " << sizeof(long long) << endl;
+    cout << " Size of float : " << sizeof(float) << endl;
+    cout << " Size of double : " << sizeof(double) << endl;
+    cout << " Size of long double : " << sizeof(long double) << endl; */
+    
+    return 0;
+}
+

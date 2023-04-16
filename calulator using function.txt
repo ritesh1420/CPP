@@ -1,0 +1,66 @@
+//Bharat nhushan
+
+#include<iostream>
+using namespace std;
+int addition(int ,int);
+int subtraction(int ,int);
+int multiplication(int,int);
+int division(int,int);
+
+
+int addition(int a, int b )
+{
+int result;
+result = a + b;
+return (result);
+}
+int subtraction(int a, int b)
+{
+int result;
+result = a - b;
+return (result);
+}
+int multiplication(int a, int b)
+{
+int result;
+result = a * b;
+return (result);
+}
+int division(int a, int b)
+{
+int result;
+result = a / b;
+return (result);
+}
+
+int main()
+{
+int a, b ;
+
+cout<<"enter first integer\n";
+cin>>a ;
+cout<<"enter second integer \n";
+cin>>b;
+int choice;
+cout<<"enter your choice (addition,subtraction,multiplication,division) ";
+cin>>choice;
+
+switch(choice)
+{
+case 1:
+cout<<" a"<<"+"<<" b=" <<addition( a, b);
+break;
+case 2:
+cout<<" a"<<"-"<<" b=" <<subtraction( a, b);
+break;
+case 3:
+cout<<" a"<<"*"<<" b=" <<multiplication( a, b);
+break;
+case 4:
+cout<<" a"<<"/"<<" b="<<division( a, b);
+break;
+default:
+cout<<"error! not choose right operators";
+}
+
+}

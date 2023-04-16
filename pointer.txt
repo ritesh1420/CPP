@@ -1,0 +1,15 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+ int *p, a=10;
+ p=&a;
+ cout<<p<<endl;
+ cout<<*p<<endl;
+ int **c;
+ c=&p;
+ cout<<**c;
+ cout<<*c;
+ }

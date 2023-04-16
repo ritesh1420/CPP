@@ -1,0 +1,30 @@
+#include<iostream>
+using namespace std;
+class dox
+{
+	int hrs,min;
+	public:
+		dox(int a,int b)
+		{
+			hrs=a;
+			min=b;
+		}
+		operator int()
+		{
+			return(hrs*60+min);
+		}
+};
+int main()
+{
+	int x,y,dur;
+	cout<<"eneter the time hrs and min:";
+	cin>>x>>y;
+	dox t(x,y);
+	dur=t;
+	cout<<"time in min:"<<dur<<endl
+	;
+	dur=t.operator int();//second way of assining
+	cout<<"time in minute:"<<dur;
+	return 0;
+	
+}

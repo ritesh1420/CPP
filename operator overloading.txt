@@ -1,0 +1,22 @@
+//unary operator
+#include<iostream>
+using namespace std;
+class complex
+{
+	int count=9;
+	public:
+		complex operator ++()
+		{
+		count=count+1;	
+		}
+		void display()
+		{
+			cout<<count;
+		}
+};
+int main()
+{
+	complex b;
+	++b;
+	b.display();
+}

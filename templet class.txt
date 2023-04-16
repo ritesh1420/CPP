@@ -1,0 +1,23 @@
+#include<iostream>
+using namespace std;
+template<class t>
+class box
+{
+	int a,b;
+	public:
+		t add(t x,t y)
+		{
+			a=x;b=y;
+		}
+		t display();
+};
+template<class t> t box<t>::display()
+{
+	cout<<a+b;
+}
+int main()
+{
+	box <int> b;
+	b.add(3,4);
+	b.display();
+}

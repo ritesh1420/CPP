@@ -1,0 +1,29 @@
+#include<iostream>
+using namespace std;
+class Area
+{
+	public:
+int area,length,breath;
+	void setDim(int l,int b)
+	{
+		cout<<"enter the lenght and breath\n";
+		cin>>l>>b;
+	length=l;
+	breath=b;
+	}
+	int getArea()
+	{
+		area=length*breath;
+      return(area);
+	}
+	
+};
+int main()
+{
+Area ar;
+ar.setDim(0,0);
+int result=ar.getArea();
+cout<<"area is:"<<result;
+
+return(0);	
+}

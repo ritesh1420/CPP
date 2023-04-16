@@ -1,0 +1,30 @@
+#include<iostream>
+using namespace std;
+class employee
+{
+	int salary;
+	float bonus;
+	
+	public:
+	employee(int a)
+	{
+		salary=a;
+	}
+	operator float()
+	{
+		bonus=(salary*20)/100;
+		return(bonus);
+	}
+	
+};
+int main()
+{
+	int a;
+	float Bonus;
+	cout<<"enter your salary:";
+	cin>>a;
+	employee emp(a);
+	Bonus=emp.operator float();
+	cout<<"your bonus is:"<<Bonus<<endl;
+	cout<<"total salary including bonus is:"<<Bonus+a;
+}

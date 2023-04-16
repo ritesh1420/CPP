@@ -1,0 +1,26 @@
+/* 
+The this pointer holds the address of current object, in simple words you can say that this pointer 
+points to the current object of the class. Let’s take an example to understand this concept.
+*/
+#include <iostream>
+using namespace std ;
+class Demo {
+private:
+ int num;
+ char ch;
+public:
+ void setMyValues(int num1, char ch1){
+ this->num =num1;
+ this->ch=ch1;
+ } void displayMyValues(){
+ cout << num << endl ;
+ cout << ch << endl ;
+ }
+};
+int main(){
+ Demo obj ;
+ obj.setMyValues(100, 'A');
+ obj.displayMyValues();
+ return 0;
+}
+

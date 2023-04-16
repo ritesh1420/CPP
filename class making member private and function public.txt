@@ -1,0 +1,28 @@
+#include<iostream>
+using namespace std;
+class me
+{
+	private://private so that no one can asses this member
+	//from out side of class
+	int age;
+	int ph;
+	public://public so that input and output can be asses form outside class also
+	void input()//function inside class by deafult is inline function
+	{
+		cout<<"enter age and phone:";
+		cin>>age>>ph;
+		if(age<0)
+		age=-age;//so that if any one enter -number out put will be positive
+		//because age is in positive forms
+	}
+	void display()
+	{
+		cout<<age<<" "<<ph;
+	}
+};
+int main()
+{
+	me b;//b is object
+	b.input();
+	b.display();
+}

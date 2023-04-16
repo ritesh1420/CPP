@@ -1,0 +1,25 @@
+//creating defalute constuctor means no any argument
+#include<iostream>
+using namespace std;
+class docoment
+{
+	int age;
+	  float marks;
+public:
+docoment(int a)//parametrise constuctor
+{
+age=a;
+}
+};
+int main()
+{
+docoment b=8;//for b parametrise constructure are call becouse we have
+//intialise b=8 where 8 show single argument if b(8,9) then 2 argument
+// docoment b1;//here defalut constructor will be call
+//here conpiler will not created any default constructor beacuse we
+//have made constuctor inside class if we dont make any constructor in class
+//then only compiler will criate deafult constructor thats why we
+//have mad one more deafult constructor for object b1
+}
+//once we constuct constructor inside class then no default constuctor will be
+//creat by the compiler

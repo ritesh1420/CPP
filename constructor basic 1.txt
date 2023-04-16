@@ -1,0 +1,23 @@
+//creating defalute constuctor
+#include<iostream>
+using namespace std;
+class docoment
+{
+	int age;
+	  float marks;
+	 public:
+	 docoment()//function with same name of class is know as
+	 //constructor it dont have any return type
+	 	{
+	
+	 		cout<<"hello\n";
+		 }
+};
+int main()
+{
+	docoment b,b1,b3;//no need to call in main function it is auto maticaly
+	//call when any object is created..
+	//it will call as much time as no of object created
+	//it will call function three time beacuse 3 object is created here;
+	return 0;
+}

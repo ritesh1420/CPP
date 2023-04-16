@@ -1,0 +1,43 @@
+#include<iostream>
+// #include "minfunc.h"
+
+using namespace std;
+
+class employee
+{
+ private:   int id;
+    float salary;
+    public:
+        void setdata(int i, float s)
+        {
+            id=i;
+            salary=s;
+        }
+        void display()
+        {
+            cout<<"Employee Id = "<<id<<endl;
+            cout<<"Salary obtained = "<<salary<<endl;
+        }
+       friend void taxcalc(employee );//declare as a friend of class
+        
+};
+
+int main()
+{
+        employee e1;
+        e1.setdata(5, 50000);
+        e1.display();
+        taxcalc(e1);
+        return 0;
+}
+
+void taxcalc(employee e2)
+{
+    if(e2.salary >10000)
+    {
+        cout<<"Tax to be paid ="<< e2.salary*.1;
+    }
+    
+}
+
+

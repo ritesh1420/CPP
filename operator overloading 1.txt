@@ -1,0 +1,32 @@
+//unary operator
+#include<iostream>
+using namespace std;
+class complex
+{
+	int count;
+	float age;
+	public:
+		complex(int a,float b)
+		{
+			count=a;
+			age=b;
+		}
+		complex operator ++()
+		{
+		count=count*(age/2);	
+		}
+		void display()
+		{
+			cout<<count;
+		}
+};
+int main()
+{
+	int a;
+	float b;
+	cout<<"enter the age and mony:";
+	cin>>a>>b;
+	complex d(a,b);
+    ++d;
+	d.display();
+}

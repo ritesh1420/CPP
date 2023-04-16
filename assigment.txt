@@ -1,0 +1,85 @@
+#include<iostream>
+using namespace std;
+
+class day{
+ public:
+ int date,month,year;
+ 
+ day(int date,int month,int year){
+  this->date=date;
+  this->month=month;
+  this->year=year;
+ }
+
+ void operator>(const day& d2)
+ {
+  if(this->year>d2.year)
+  {
+  	
+  cout<<"Date "<<this->date<<":"<<this->month
+      <<":"<<this->year<<" is greater than "<<d2.date<<":"<<d2.month
+      <<":"<<d2.year<<endl;
+      
+  }
+   else if(this->month>d2.month)
+  {
+  	 cout<<"Date "<<this->date<<":"<<this->month
+      <<":"<<this->year<<" is greater than "<<d2.date<<":"<<d2.month
+      <<":"<<d2.year<<endl;
+      
+  }
+   else if(this->date>d2.date)
+  {
+  	 cout<<"Date "<<this->date<<":"<<this->month
+      <<":"<<this->year<<" is greater than "<<d2.date<<":"<<d2.month
+      <<":"<<d2.year<<endl;
+
+  }
+  else
+  {
+ cout<<"Date "<<d2.date<<":"<<d2.month
+      <<":"<<d2.year<<" is greater than "<<this->date<<":"<<this->month
+      <<":"<<this->year<<endl;
+  }
+}
+ void show_date()
+ {
+  cout<<"Date is \t"<<date<<":"<<month<<":"<<year<<endl<<endl;
+ }
+};
+
+int main()
+{
+ int date,month,year;
+ 
+ cout<<"Enter Date 1:"<<endl;
+ cout<<"\t The Date = ";
+ cin>>date;
+ cout<<"\t The Month = ";
+ cin>>month;
+ cout<<"\t The Year = ";
+ cin>>year;
+ day date1=day(date,month,year);
+ 
+ cout<<"Enter Date 2:"<<endl;
+ cout<<"\t The Date = ";
+ cin>>date;
+ cout<<"\t The Month = ";
+ cin>>month;
+ cout<<"\t The Year = ";
+ cin>>year;
+ day date2=day(date,month,year);
+ 
+ 
+ cout<<endl<<endl;
+ cout<<"*First Date**"<<endl;
+ date1.show_date();
+ cout<<"*Second Date**"<<endl;
+ date2.show_date();
+ 
+ 
+ cout<<"* Result **"<<endl;
+ date1 > date2;
+ 
+ return 0;
+}

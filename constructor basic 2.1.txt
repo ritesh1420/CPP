@@ -1,0 +1,22 @@
+//creating defalute constuctor means no any argument
+#include<iostream>
+using namespace std;
+class docoment
+{
+	int age;
+	  float marks;
+
+};
+int main()
+{
+docoment b1;
+}
+//if we donot creat any type of constructor
+//then compiler always creat two constuctor
+//1.defult construvtor and
+// 2.copy constructor
+//if we create default constructor and not copy constructor
+// then also copy construct will be created by compiler
+// automaticaly when object is created
+//unless until we dont creat both type of constructor
+//compiler will automaticaly creat not created constuctor

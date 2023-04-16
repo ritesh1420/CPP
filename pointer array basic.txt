@@ -1,0 +1,9 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+int a=11,b=22,c=33;
+int *arr[]={&a,&b,&c};
+cout<<arr[1]<<endl;
+cout<<*arr[1];
+}

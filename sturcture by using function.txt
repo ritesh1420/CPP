@@ -1,0 +1,29 @@
+#include<iostream>
+#include<string.h>
+using namespace std;
+struct book//(now book act like a data type(user define data type)
+{
+		char name[20];
+		int bookid;
+		float rs;
+};
+void display(book b1);
+book input();
+int main()
+{
+book b1;
+b1=input();//take nothing return something means return b1 which is of book type data;
+display(b1);
+}
+void display(book b1)
+{
+	cout<<b1.name<<endl<<b1.bookid<<endl<<b1.rs<<endl;
+}
+
+book input()
+{
+	book b1;
+	cout<<"enter name,bookid and price:\n";
+cin>>b1.name>>b1.bookid>>b1.rs;
+return(b1);	
+}

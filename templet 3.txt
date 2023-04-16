@@ -1,0 +1,24 @@
+#include <iostream> 
+using namespace std;
+template <class I , class D> class Myclass  
+{    
+	I x;   D y;
+	public:    Myclass(I m, D n)     
+	{           
+		x=m;  y=n;        
+		cout<<"Constructor Called: "<< " X= " << x << "    Y= " << y << endl;       
+	}    
+	double display_sum() ;// just the function declaration   
+};
+template <class I, class D> double Myclass <I,D> :: display_sum() // actual definition outside class
+{
+	return x+y;
+}
+int main() 
+ {   
+	Myclass <int,double> a(2,3.1);
+	cout << "Addition of Int + double : " << a.display_sum() << endl;  
+	Myclass <double,int> b(3.4,5);
+	cout << "Addition of double + Int : " << b.display_sum() << endl;  
+ 	return 0;
+}

@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+
+//a stores the address of x
+void increment(int *a){
+    cout << "address of X and value stored in a is same: " << a << endl ;
+      cout << "address of a: " << &a << endl ;
+    
+    cout << "Value of X: " << *a << endl ;
+  
+(*a)++;  // *a = *a + 1 ; *a++ ;
+cout << "Value in Function increment: "<< *a <<endl;
+}
+int main()
+{
+int x = 5 ;
+cout << "Value of X: " << x << endl ;
+ cout << "address of X: " << &x << endl ;
+ increment( &x ); //Passing address of x
+ cout << "Value in Function main: "<< x <<endl;
+ return 0;
+}
+
+

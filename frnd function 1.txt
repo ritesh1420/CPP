@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+class XYZ {
+private:
+int num=100;
+char ch='Z';
+public:
+friend void disp(XYZ obj3);
+};
+//Global Function
+void disp(XYZ obj2){
+cout<<obj2.num<<endl;
+cout<<obj2.ch<<endl;
+
+}
+int main() {
+XYZ obj1;
+disp(obj1);
+return 0;
+}
+
+

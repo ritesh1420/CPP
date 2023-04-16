@@ -1,0 +1,38 @@
+#include <iostream>
+using namespace std ;
+
+class Simple
+{
+ public:
+ // char a ;
+ int b , c;
+};
+
+int main()
+{
+ Simple obj ;
+ Simple *ptr ; // Pointer of class type
+ // obj.a = 'Z'; // if we skip this initialisation then outout will be BLANK  
+ ptr = &obj ; // address of obj is assigned to pointer ptr (both of which are of type CLASS Simple)
+  ptr->b =  1 ;
+   ptr->c =  10 ;
+// cout << sizeof(obj) << endl << sizeof(obj.a) << endl << sizeof(obj.b) << endl ;
+ cout << &obj << endl << ptr << endl ; 
+ /* cout << obj.a << endl ; 
+ cout << ptr->a << endl ; // Accessing member with pointer using symbol -> 
+ cout << (void*) &obj.a << endl ;
+ cout << (void*) &ptr->a << endl ; */ 
+ 
+ cout << obj.b << endl ; 
+ cout << ptr->b << endl ; // Accessing member with pointer using symbol -> 
+ cout << &(obj.b) << endl ; // accessing the address of class member 
+ cout << &(ptr->b) << endl ; // accessing the address of class member using pointer (an alternate way) 
+
+ (ptr->b) = (ptr->b) + 1 ; 
+
+ cout << obj.b << endl ; 
+ cout << (*ptr).b << endl ;
+ // cout << &((*ptr).b) << endl ;
+ 
+}
+

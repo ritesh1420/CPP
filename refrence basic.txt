@@ -1,0 +1,12 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	int var=8;
+	int &p=var;
+	cout<<"adress of var is:"<<&var<<endl;
+	
+	cout<<"adress of p is:"<<&p<<endl;
+	cout<<"value of var is:"<<p<<endl;
+	cout<<"value of p is:"<<var<<endl;
+}

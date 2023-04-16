@@ -1,0 +1,36 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main() {
+   cout << "no setw: " << 42 << endl;
+   cout << "setw(6): " << setw(6) << 42 << endl;
+   cout << "setw(6), several elements: " << 89 << setw(6) << 12 << 34 << endl;
+   return 0 ;
+}
+
+//
+#include <iostream>
+#include <iomanip>
+using namespace std;
+int main()
+{
+    std::cout << "default fill: " << std::setw(10) << 42 << endl;
+          cout<< "setfill('*'): " << std::setfill('*')
+                              << std::setw(10) << 42 << endl;
+}
+
+
+
+//
+#include <iostream>
+#include <iomanip>
+using namespace std;
+int main() {
+   const long double pi = 3.141592653589793239;
+   cout << "default precision (6): " << pi << endl;
+   cout << "setprecision(10): " << setprecision(10) << pi << endl;
+}
+
+
+

@@ -1,0 +1,32 @@
+//unary operator using constructor
+#include<iostream>
+using namespace std;
+class complex
+{
+	int a;
+	int b;
+	public:
+		complex (int x,int y)
+		{
+			a=x;
+			b=y;
+		}
+		void showdata()
+		{
+			cout<<a<<" "<<b;
+		}
+		complex operator -()
+		{
+			a=-a;
+			b=-b;
+			return complex (a,b);
+		}
+	
+};
+int main()
+{
+	complex b1(4,5);
+	-b1;
+	b1.showdata();
+	
+}

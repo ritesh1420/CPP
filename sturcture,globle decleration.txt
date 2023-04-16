@@ -1,0 +1,17 @@
+#include<iostream>
+#include<string.h>
+using namespace std;
+struct book
+{
+		char name[20];
+		int bookid;
+	    float rs;
+
+	
+}b1,b2;
+int main()
+{
+	book b1={"ritesh",4,400};
+	cout<<b1.name<<endl<<b1.bookid<<endl<<b1.rs;
+}
+//declearing stucture before main is know as globale defination structure

@@ -1,0 +1,9 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	cout<<"hii";
+	main()//calling function it self;
+}
+//infinite loop of hii because function call it
+//self infinite time

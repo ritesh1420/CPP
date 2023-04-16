@@ -1,0 +1,20 @@
+//destructor invoked implicitly when object is going to destroy.
+#include<iostream>
+using namespace std;
+class complex
+{public:
+	int a,b;
+		~complex()//destuctor do not take any argument
+		{
+			cout<<"me";
+}	 
+};
+int main()
+{
+	complex real;
+	real.b=5;
+	cout<<real.b<<endl;
+	cout<<"hello\n";
+}
+// if we do not creat any destructor compiler will automatecally creat it
+//jab object ke end hone se phle destructor call hota hai

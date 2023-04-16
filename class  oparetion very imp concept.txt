@@ -1,0 +1,31 @@
+using namespace std;
+struct complex
+{
+	private:
+		int a,b;
+	public:
+		void set_data(int x,int y)
+		{
+			
+		cin>>x>>y;
+			a=x;b=y;
+		}
+		void show_data()
+		{
+			cout<<"\na="<<a<<"b="<<b;
+		}
+			
+};
+int main()
+{
+	complex b1,b2,b3;//b1 is called object
+	b1.set_data(26,33);//default value if we dont take any value it will be printf;
+	b2.set_data(12,2);
+	b3=b1+b2;//here complex is non primitive data type we have made it;
+	//primitive data type means int,char,float etc;
+	//so compilor will give error;
+	//artemetic operation is only done in primitive data type 
+	//hence complex is non premetive tyype hence it will give error
+	b1.show_data();
+	b2.show_data();
+}

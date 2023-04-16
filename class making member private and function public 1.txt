@@ -1,0 +1,25 @@
+#include<iostream>
+using namespace std;
+struct complex
+{
+	private:
+		int a,b;//a and b is instense member veriable means object ka veriable 
+	public:
+		void set_data(int x,int y)
+		{
+			
+		cin>>A>>b;
+			a=x;b=y;
+		}
+		void show_data()
+		{
+			cout<<"\na="<<a<<"b="<<b;
+		}
+			
+};
+int main()
+{
+	complex b1;//b1 is called object
+	b1.set_data(26,33);//default value if we dont take any value it will be printf;
+	b1.show_data();
+}

@@ -1,0 +1,48 @@
+/*
+datatype class_name::*pointer_name = &class_name::datamember_name ;
+*/ 
+#include <iostream>
+using namespace std ;
+class Data
+{
+ public:
+ int a;       // Data member 
+ void print() // member function
+ {
+ cout << "a is " << a << endl ; 
+ }
+};
+int main()
+{
+ int Data::*ptr1 = &Data::a ; // pointer to data member 'a'    
+ Data obj1, obj2 , *obj_ptr ;
+ obj_ptr = &obj1 ; // pointer to object obj1
+ 
+ obj_ptr->a = 13 ;
+ cout <<  obj_ptr->a   << endl ;
+ 
+// int Data::*ptr2 = &Data::a ; // pointer2 to data member 'a'
+ 
+ cout << &(obj1.*ptr1) << endl << &(obj1.a) << endl ;
+ 
+ obj_ptr = &obj2 ; // pointer to object obj2
+ cout << &(obj2.*ptr1) << endl << &(obj2.a) << endl << &(obj_ptr->a) << endl ;
+ 
+ obj1.*ptr1 = 10 ;
+ obj1.print() ;
+
+ obj2.*ptr1 = 30 ;
+ obj2.print() ;
+
+ obj1.a = 15 ;
+ obj1.print() ;
+
+ obj_ptr->*ptr1 = 20 ;
+ obj_ptr->print() ;
+ 
+ obj_ptr->a = 40 ;
+ obj_ptr->print() ;
+ 
+ // if ( )
+ 
+}

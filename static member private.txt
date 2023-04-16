@@ -1,0 +1,23 @@
+#include<iostream>
+using namespace std;
+class docoment
+{
+	int you;//instance member variable
+	static int me;//static member variable or class variable
+	public:
+	void setme(int r)
+	{
+		me=r;
+		cout<<me;
+	}
+};
+int docoment::me=5;//defautl value is 0
+int main()
+{
+	docoment b;
+	b.setme(66);//behought b object this function cant be call
+	//but we know that ststic value thorugh out the program
+	//same hota hai aur ak hi hota hai
+	//docoment::setme(99);it will work only when function is  also a ststic member funntion
+	return 0;
+}

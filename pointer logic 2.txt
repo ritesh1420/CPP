@@ -1,0 +1,12 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+int a=32;
+int *p=&a;//pointer
+char ch='A';//refrence
+char &b=ch;
+b+=a;
+*p+=ch;
+cout<<a<<","<<ch<<endl;
+}

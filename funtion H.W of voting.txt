@@ -1,0 +1,23 @@
+#include<iostream>
+using namespace std;
+int vote(int);
+int main()
+{
+	cout<<"please enter your age:";
+	int x,y;
+	cin>>x;
+	y=vote(x);
+	
+}
+int vote(int a)
+{
+	if(a>=18)
+	{
+		cout<<"you are eligibal for voting";
+	}
+	else
+	{
+		cout<<"you are not eligibal for voating";
+	}
+	return(a);
+}

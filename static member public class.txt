@@ -1,0 +1,16 @@
+#include<iostream>
+using namespace std;
+class docoment
+{public:
+	int you;//instance member variable
+	static int me;//static member variable or class variable
+};
+int docoment::me=5;//defautl value is 0
+int main()
+{
+	docoment b;
+	b.me=55;
+	cout<<b.me;//by object
+      cout<<docoment::me //object se kuchh lena dena nahi  
+	
+}

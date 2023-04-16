@@ -1,0 +1,33 @@
+//constructor
+#include<iostream>
+using namespace std;
+class base
+{
+	public:
+		base()
+		{
+			cout<<"hello base class 0 argument constructor"<<endl;
+		}
+		base(int s)
+		{
+			cout<<"hello base class parametrise constructor"<<endl;
+		}
+};
+class derive:public base
+{
+	public:
+		derive()
+		{
+			cout<<"hello derive class 0 argument constructor"<<endl;
+		}
+		derive(int c):base(c)//it is compalsary to write :base(x)then only prarametrise constructor will be call
+		// ,other wise instant of prarametrise constructor 0 constructor will be call
+		{
+			cout<<"hello derive class parametrise constructor"<<endl;
+		}
+};
+int main()
+{
+	derive b;
+	derive c(2);
+}

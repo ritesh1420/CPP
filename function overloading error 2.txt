@@ -1,0 +1,24 @@
+error refination of ind add(int,int) means
+two same function with same argument 
+**two work properly arument should be difffeent
+#include<iostream>
+using namespace std;       
+int add(int,int);//two function having two name
+int add(int,int);
+int main()
+{
+	int a=add(5,6);
+	cout<<a<<endl;
+	int d=add(10,3);
+	cout<<d<<endl;
+}
+int add(int a,int b)
+{
+	int c=a+b;
+	return (c);
+}
+int add(int x,int y)
+{
+	int r=x/y;
+	return(r);
+}

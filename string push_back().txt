@@ -1,0 +1,14 @@
+#include<iostream>
+#include<string>
+using namespace std;
+int main()
+{
+	string a;
+	getline(cin,a);
+	cout<<"initial string is:\n";
+	cout<<a<<endl;
+	a.push_back('s');
+	cout<<"string after pushback:\n";
+	cout<<a<<endl;
+	return(0);
+}

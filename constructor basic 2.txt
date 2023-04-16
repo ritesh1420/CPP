@@ -1,0 +1,18 @@
+//creating defalute constuctor means no any argument
+#include<iostream>
+using namespace std;
+class docoment
+{
+	int age;
+	  float marks;
+
+};
+int main()
+{
+docoment b1;
+}
+//even we dont creat any constuctor in class then also
+//when object is created compilar will atomaticaly call
+default constractor..
+//THATS WHY WE CANT ASSINE (DOCOMENT B1=8) BEACUSE DEFAULT CONSTRUCTOR DONT HAVE ANY
+//ARGUMENT

@@ -1,0 +1,11 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	int *p,var=8;
+	p=&var;
+	cout<<"adress of var is:"<<&var<<endl;
+	cout<<"adress of var is:"<<p<<endl;
+	cout<<"adress of p is:"<<&p<<endl;
+	cout<<var<<endl<<*p;
+}

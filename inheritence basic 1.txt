@@ -1,0 +1,51 @@
+#include<iostream>
+using namespace std;
+class ex
+{
+	public:
+		void fun()
+		{
+			cout<<"base fun"<<endl;
+			
+		}
+		void save()
+		{
+			cout<<"base save"<<endl;
+		}
+		void me()
+		{
+			cout<<"base me"<<endl;
+		}
+		
+};
+class newex:public ex
+{
+	public:
+			void fun()
+		{
+			cout<<"derive fun"<<endl;
+			
+		}
+		void save()
+		{
+			cout<<"derive save"<<endl;
+		}
+		
+		void you()
+		{
+			cout<<"derive you"<<endl;
+		}
+		void me()
+		{
+			cout<<"derive me"<<endl;
+		}
+	
+};
+int main()
+{
+	newex e;
+	e.fun();
+	e.save();
+	e.me();
+	e.you();
+}

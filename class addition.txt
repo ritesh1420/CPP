@@ -1,0 +1,32 @@
+#include<iostream>
+using namespace std;
+struct complex
+{
+	private:
+		int a,b;//a and b is instense member veriable means object ka veriable
+	public:
+		void set_data(int x,int y)
+		{
+			a=x;b=y;
+		}
+		void show_data()
+		{
+			cout<<"\na="<<a<<"b="<<b;
+		}
+		complex add(complex c)
+		{
+			complex temp;
+			temp.a=a+c.a;
+			temp.b=b+c.b;
+			return(temp);
+		}
+			
+};
+int main()
+{
+	complex b1,b2,b3;
+	b1.set_data(26,33);
+	b2.set_data(12,2);
+	b3=b1.add(b2);
+	b3.show_data();
+}

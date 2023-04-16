@@ -1,0 +1,23 @@
+#include<iostream>
+using namespace std;
+class me//class dont occupie memoey
+{
+	public:
+	int age;
+	int ph;
+	void input()//function inside class by deafult is inline function
+	{
+		cout<<"enter age and phone:";
+		cin>>age>>ph;
+	}
+	void display()
+	{
+		cout<<age<<ph;
+	}
+};
+int main()
+{
+	me b;//b is called object which occupie memory 
+	b.input();
+	b.display();
+}

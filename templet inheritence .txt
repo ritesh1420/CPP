@@ -1,0 +1,42 @@
+#include<iostream>
+using namespace std; 
+template <class T>
+class BaseClass {
+ protected:
+   T x;
+  public:
+    void setdata(T a)
+    { 
+        x=a;
+    }
+    void display () 
+    {
+        cout<<"x ="<< x <<endl;
+    }
+};
+template <class T>
+class Derived :public BaseClass<T>  //Here <writing <Type> at the end is madatatory
+{ 
+    T z;
+  public:
+    void setZ( T b)
+    {
+        z=b;
+    }
+    void display ()
+    {
+      BaseClass<T>::display(); //whenever you access base class member, mention <type>
+      cout<<" z= "<<z;
+    }
+};
+int main () {
+  Derived <int> D; //while creating objects, mentioning <type> is important as it tells how many bytes to allocate for objects
+  D.setdata(10);
+  D.setZ(5);
+  D.display();
+   Derived <double> D1;
+    D1.setdata(10.5);
+  D1.setZ(5.7);
+  D1.display();
+  return 0;
+}

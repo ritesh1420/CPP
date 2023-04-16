@@ -1,0 +1,22 @@
+#include<iostream>
+using namespace std;
+class docoment
+{
+	int a=33,b=66;
+	friend class me;
+};
+class me
+{
+	public:
+	void hello(docoment c)
+	{
+		cout<<c.a;
+		cout<<c.b;
+	}
+};
+int main()
+{
+	me b;
+	docoment b1;
+	b.hello(b1);
+}

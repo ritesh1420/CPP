@@ -1,0 +1,17 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	int var[3]={111,222,333};
+	int *ptr,i;
+	
+	for(i=0;i<3;i++)
+	{
+	ptr=&var[0+i];
+		cout<<"adress of a["<<i<<"]=";
+		cout<<ptr<<endl;
+		cout<<"value of var["<<i<<"]=";
+		cout<<*ptr<<endl;
+		
+	}
+}

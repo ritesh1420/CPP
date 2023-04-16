@@ -1,0 +1,25 @@
+#include<iostream>
+using namespace std;
+struct complex
+{
+	private:
+		int a,b;//a and b is instense member veriable means object ka veriable
+	public:
+		void set_data(int,int);//function deceleration or function prototype;
+		void show_data()
+		{
+			cout<<"\na="<<a<<"b="<<b;
+		}
+		
+			
+};
+void complex::set_data(int x,int y)
+{a=y;b=x;}//we use membership level between return type and function name
+//by using membership level we can asses function out side the class also.
+// ony diffrerence is that by default is is not inline function.
+int main()
+{
+	complex b1;//b1 is called object
+	b1.set_data(26,33);//default value if we dont take any value it will be printf;
+	b1.show_data();
+}

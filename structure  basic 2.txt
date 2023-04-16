@@ -1,0 +1,25 @@
+#include<iostream>
+#include<string.h>
+using namespace std;
+struct book//(now book act like a data type(user define data type)
+{
+		char name[20];
+		int bookid;
+	    float rs;
+
+	
+}b1;//b1 is variable globle veriable it can be access any where in program
+int main()
+{
+
+	strcpy(b1.name,"ritesh");//b1.name="ritesh;we cant write it.it will give error;
+	//because b1.name indicate name of array and name of array indicate the first block of adress
+	//which is constant so
+    b1.bookid=4;
+	b1.rs=990;
+	cout<<b1.name<<endl<<b1.bookid<<endl<<b1.rs<<endl;
+	book b2;//here b2 is local veriable of book data type it cant be access any where in program
+     b2.rs=58;
+     
+	cout<<b2.rs;
+}

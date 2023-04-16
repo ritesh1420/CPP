@@ -1,0 +1,97 @@
+#include <iostream> 
+using namespace std; 
+class Currency { 
+public: 
+    // Member Object 
+    int rupee, dollar; 
+    // No Parameter Constructor 
+    Currency() 
+    { 
+        this->rupee = 0; 
+        this->dollar = 0; 
+    } 
+    // Constructor to initialize the object's value 
+    // Parametrized Constructor 
+    Currency(int r, int d) 
+    { 
+        this->rupee = r; 
+        this->dollar = d; 
+    } 
+    // Declaring friend function using friend keyword 
+    friend Currency operator+(Currency&, Currency&); 
+}; 
+// Implementing friend function with two parameters 
+Currency operator+(Currency& c1, Currency& c2) // Call by reference 
+{ 
+    // Create an object to return 
+    Currency c3; 
+    // Perform addition of feet and inches 
+    c3.rupee = c1.rupee + c2.rupee; 
+    c3.dollar = (c1.dollar + c2.dollar) * 70 ; 
+    // Return the resulting object 
+    return c3; 
+} 
+// Driver Code 
+int main() 
+{ 
+    // Declaring and Initializing first object 
+    Currency cr1(8, 9); 
+    // Declaring and Initializing second object 
+    Currency cr2(10, 2); 
+  //  Currency cr4(20, 10);
+    // Declaring third object 
+    Currency cr3 ; 
+    // Use overloaded operator 
+    cr3 = cr1 + cr2  ;
+    // Display the result 
+    cout << "\nTotal Rupees & Dollars: " << "\nRs. "<<cr3.rupee << "\n$ converted to Rupees: " << cr3.dollar; 
+    return 0; 
+}
+
+
+
+#include <iostream>
+using namespace std;
+  
+class Complex
+{
+private:
+    int real, imag;
+public:
+    Complex(int r = 0, int i =0)
+    {  real = r;   imag = i; }
+    friend ostream & operator << (ostream &out, const Complex &c);
+    friend istream & operator >> (istream &in,  Complex &c);
+};
+  
+ostream & operator << (ostream &out, const Complex &c)
+{
+    out << c.real;
+    out << "+i" << c.imag << endl;
+    return out;
+}
+  
+istream & operator >> (istream &in,  Complex &c)
+{
+    cout << "Enter Real Part ";
+    in >> c.real;
+    cout << "Enter Imaginary Part ";
+    in >> c.imag;
+    return in;
+}
+
+int main()
+{
+   Complex c1;
+   cin >> c1;
+   cout << "The complex object is ";
+   cout << c1;
+   return 0;
+}
+
+
+
+
+
+
+
